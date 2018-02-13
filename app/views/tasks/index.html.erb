@@ -3,9 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
   <% result = task.completed ? "x" : " " %>
-  <li> [<%= result %>] | <%= link_to task.title, show_path(task.id) %>   </li>
+  <li> [<%= result %>] | <%= link_to task.title, task_path(task.id) %>   </li>
   <% end %>
 </ul>
 
-<%= link_to "Create new task", tasks_new_path %>
+<%= link_to "Create new task", new_task_path %>
 
