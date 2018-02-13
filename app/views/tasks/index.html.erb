@@ -3,9 +3,8 @@
 <ul>
   <% @tasks.each do |task| %>
   <% result = task.completed ? "x" : " " %>
-  <li> [<%= result %>] | <%= link_to task.title, task_path(task.id) %> <%= link_to "Delete Task",task_path(task.id), method: :delete %>   </li>
+  <li> [<%= result %>] | <%= link_to task.title, task_path(task.id) %> <%= link_to "Delete Task",task_path(task.id), method: :delete, data: { confirm: "Are you sure?" }  %>   </li>
   <% end %>
 </ul>
 
 <%= link_to "Create new task", new_task_path %>
-

@@ -1,0 +1,23 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  margin: 0px;
+}
+// Nav Bar
+
+#navbar {
+  background-color: #B30753;
+  color: white;
+  text-align: center;
+  height: 20vh;
+  margin:0px;
+  display: flex;
+
+  h1 {
+    margin: 0px;
+  }
+}
+
