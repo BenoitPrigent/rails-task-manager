@@ -26,10 +26,14 @@ class TasksController < ApplicationController
   def update
     task_to_change = Task.find(params[:id])
     @new_task = params.require("task").permit(:title, :details,:completed)
-
     task_to_change.update(@new_task)
     redirect_to tasks_path
-    # raise
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
   end
 
 
